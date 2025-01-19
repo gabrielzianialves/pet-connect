@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Pet</title>
+    <link rel="stylesheet" href="../static/css/cadastroPet.css">
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="../static/images/PetConnect.png" alt="logo">
+        </a>
+        <h1>Cadastro de Pets</h1>
+    </header>
+
+    <form method="POST" action="/pets">
+        <div class="informacao">
+            <span class="titulo">Cliente Associado</span>
+            <select name="id_cliente" id="id_cliente">
+                {% for cliente in clientes %}
+                    <option value="{{ cliente.id_cliente }}">{{ cliente.nome }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="informacao">
+            <span class="titulo">Nome</span>
+            <input type="text" name = "nome_pet" placeholder="Insira o nome" required>
+        </div>
+        <div class="informacao">
+            <span class="titulo">Espécie</span>
+            <input type="text" name = "especie" placeholder="Insira a espécie" required>
+        </div>
+        <div class="informacao">
+            <span class="titulo">Idade</span>
+            <input type="number" name = "idade" placeholder="Insira a idade" required>
+        </div>
+        <div class="informacao">
+            <span class="titulo">Raça</span>
+            <input type="text" name = "raca" placeholder="Insira a raça" required>
+        </div>
+        <div class="informacao">
+            <span class="titulo">Observações</span>
+            <input type="text" name = "observacoes" placeholder="Insira informações extras" required>
+        </div>
+        <div class="informacao">
+            <button type="submit" name = "enviar" value="Enviar" class="enviar">Cadastrar pet</button>
+        </div>
+
+    </form>
+</body>
+</html>

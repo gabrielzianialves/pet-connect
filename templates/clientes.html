@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Cliente</title>
+    <link rel="stylesheet" href="../static/css/cadastroCliente.css">
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="../static/images/PetConnect.png" alt="logo">
+        </a>
+        <h1>Cadastro de Clientes</h1>
+    </header>
+
+    <form method="POST" action="/clientes">
+        <div class="informacao">
+            <span class="titulo">Nome Completo</span>
+            <input type="text" name = "nome" placeholder="Insira o nome" required>
+        </div>
+        <div class="informacao">
+            <span class="titulo">E-mail</span>
+            <input type="email" name = "email" placeholder="Insira o e-mail" required>
+        </div>
+        <div class="informacao">
+            <span class="titulo">CPF</span>
+            <input type="text" name = "cpf" placeholder="Insira o CPF" required>
+        </div>
+        <div class="informacao">
+            <span class="titulo">Telefone Celular</span>
+            <input type="text" name = "telefone" placeholder="(XX) XXXXX-XXXX" required>
+        </div>
+        <div class="informacao">
+            <button type="submit" name = "enviar" value="Enviar" class="enviar">Cadastrar cliente</button>
+        </div>
+
+    </form>
+</body>
+</html>
