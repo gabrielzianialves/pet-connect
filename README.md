@@ -1,0 +1,1 @@
+A PetConnect consiste em um sistema simples de gerenciamento de um Petshop. O projeto inclui o cadastro de clientes e pets (associados) e a visualização dos respectivos dados cadastrados em tabelas. Foram utilizadas as tecnologias HTML, CSS e javaScript para o Front-End, e SQL Server e Flask (Python) para o Back-End.
